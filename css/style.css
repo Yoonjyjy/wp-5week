@@ -1,0 +1,175 @@
+* {
+  font-family: 'Song Myung', serif;
+  
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0px;
+}
+
+.nav {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  border-bottom: 1px solid #dddddd;
+  background-color: #A1A0D0;
+  position: fixed;
+  width: 100%;
+}
+
+.item {
+  margin: 0 20px;
+}
+
+.container1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "header1 header1 header1"
+    "section1 section1 aside"
+    "image1 section2 section2"
+    "footer footer footer";
+  align-content: space-around;
+}
+
+
+
+.banner {
+  margin: 0px 10px 20px;
+}
+
+.ban_title {
+  font-size: 2em;
+  border-top: 3px dashed #83601e;
+  padding-top: 30px;
+}
+
+.ban_content {
+  margin: auto;
+  text-align: center;
+  font-size: 1.2em;
+  background-color: orange;
+  border: 3px solid black;
+  border-radius: 20px;
+  height: 100px;
+  width: 300px;
+  padding-bottom: 20px;
+  transition-duration: 2s;
+}
+
+.ban_content:hover {
+  width: 400px;
+  background-color: yellow;
+}
+
+
+header1 {
+  grid-area: header1;
+  background-color: #FFD104;
+  margin-top: 60px;
+  align-items: center;
+}
+
+header {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  height: 60px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.section1 {
+  grid-area: section1;
+  margin: 20px;
+}
+
+aside {
+  grid-area: aside;
+  margin: 20px;
+}
+
+.section2 {
+  grid-area: section2;
+  margin: 20px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: gray;
+  text-align: center;
+  margin: 10px;
+  height: 100px;
+}
+
+.image1 {
+  grid-area: image1;
+
+}
+/* 여기까지는 기존 css */
+
+
+#menu-button {
+  width: 40px;
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 2em;
+}
+
+#menu-button:focus {
+  outline: none;
+}
+
+#menu-button > .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 1.5px;
+  margin: 3px auto;
+}
+
+#side-menu {
+  position: fixed;
+  top: 60px; /* header의 높이 다음에 나올 수 있도록 */
+  left: 0;
+  bottom: 0;
+  border-right: 1px solid #ddd;
+  background-color: #eee;
+  width: 200px;
+  padding: 10px 20px;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.4);
+  transition-duration: 500ms;
+}
+
+#side-menu.hidden {
+  left: -100%;
+}
+
+#side-menu > ul {
+  list-style: none;
+}
+
+#side-menu > ul > li {
+  margin: 20px 0;
+}
+
+#side-menu > ul > li > a {
+  text-decoration: none;
+  color: #555;
+}
+#side-menu > ul > li > a:hover {
+  font-weight: bold;
+  color: #222;
+}
+/* 여긴 토글로 메뉴바 만들 때의 css */
+

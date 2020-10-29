@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container > * {
+  position: absolute;
+}
+
+
+.section1 > p, .section2 > p, aside > p, .banner > a {
+
+  top: 150px;
+  left: 60px;
+  animation-name: banner-content;
+  animation-duration: 3s;
+}
+
+
+.banner {
+  overflow: hidden;
+}
+
+
+.ban_title > a {
+  top: 150px;
+  left: 60px;
+  width: 40%;
+  animation-name: banner-content;
+  animation-duration: 3s;
+}
+
+@keyframes banner-title {
+  from { left: -50%; }
+  to { left: 50px; }
+}
+
+@keyframes banner-content {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
